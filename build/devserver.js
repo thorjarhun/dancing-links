@@ -1,6 +1,6 @@
 var express = require('express');
 var assetManager = require('connect-assetmanager');
-var assetHandler = require('connect-assetmanager-handlers');
+//var assetHandler = require('connect-assetmanager-handlers');
 var stylus = require('stylus');
 var fs = require('fs');
 var jsdoc = require('./runjsdoc.js');
@@ -53,7 +53,7 @@ var assetManagerGroups = {
 	        'files': ['Utils.js', '*', 'Main.js'],
 	        'postManipulate': {
 	            '^': [
-	                assetHandler.uglifyJsOptimize,
+//	                assetHandler.uglifyJsOptimize,
 	                storeInFile(webroot+'/code.bundle.js'),
 	                generateJSDoc
 	            ]
